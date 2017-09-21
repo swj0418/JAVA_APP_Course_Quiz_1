@@ -26,8 +26,7 @@ public class MyCalc {
 	
 	static void getNumbers()
 	{
-		getFirstNumber();
-		getSecondNumber();
+		System.out.println("Choose an operation"); choice = in.nextInt();
 	}
 	
 	static void addNumbers()
@@ -91,26 +90,30 @@ public class MyCalc {
 			MyCalc mc = new MyCalc();
 			System.out.println("Choose an operation : ");
 			mc.showMenu();
-			System.out.println("Choose an operation"); choice = in.nextInt();
+			mc.getNumbers();
 			
 			if(choice == 1)
 			{
-				mc.getNumbers();
+				mc.getFirstNumber();
+				mc.getSecondNumber();
 				mc.addNumbers();
 			}
 			else if(choice == 2)
 			{
-				mc.getNumbers();
+				mc.getFirstNumber();
+				mc.getSecondNumber();
 				mc.subNumbers();
 			}
 			else if(choice == 3)
 			{
-				mc.getNumbers();
+				mc.getFirstNumber();
+				mc.getSecondNumber();
 				mc.multNumbers();
 			}
 			else if(choice == 4)
 			{
-				mc.getNumbers();
+				mc.getFirstNumber();
+				mc.getSecondNumber();
 				mc.divNumbers();
 			}
 			else if(choice == 5)

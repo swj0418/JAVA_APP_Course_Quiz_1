@@ -95,22 +95,26 @@ public class MyCalc {
 			
 			if(choice == 1)
 			{
-				mc.getNumbers();
+				mc.getFirstNumber();
+				mc.getSecondNumber();
 				mc.addNumbers();
 			}
 			else if(choice == 2)
 			{
-				mc.getNumbers();
+				mc.getFirstNumber();
+				mc.getSecondNumber();
 				mc.subNumbers();
 			}
 			else if(choice == 3)
 			{
-				mc.getNumbers();
+				mc.getFirstNumber();
+				mc.getSecondNumber();
 				mc.multNumbers();
 			}
 			else if(choice == 4)
 			{
-				mc.getNumbers();
+				mc.getFirstNumber();
+				mc.getSecondNumber();
 				mc.divNumbers();
 			}
 			else if(choice == 5)
