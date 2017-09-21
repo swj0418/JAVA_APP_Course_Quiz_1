@@ -1,0 +1,13 @@
+package main;
+
+public class MyCalc {
+	MyCalc() // Initialization
+	{
+		
+	}
+	
+	static void showMenu()
+	{
+		
+	}
+}

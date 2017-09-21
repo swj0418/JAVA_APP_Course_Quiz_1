@@ -1,0 +1,93 @@
+package main;
+
+import java.util.Scanner;
+
+public class MyCalc {
+	static int x;
+	static int y;
+	static int choice;
+	
+	MyCalc() // Initialization
+	{
+		this.x = 0;
+		this.y = 0;
+	}
+	
+	static void showMenu()
+	{
+		System.out.println("=============MENU=============");
+		System.out.println("1: Add two integers");
+		System.out.println("2. Subtract an integer from an integer");
+		System.out.println("3. Multiply two integers");
+		System.out.println("4. Divide an integer into an integer");
+		System.out.println("5. Exit");
+	}
+	
+	static void getNumbers()
+	{
+		Scanner in = new Scanner(System.in);
+		
+		System.out.print("Input x : "); x = in.nextInt();
+		System.out.print("Input y : "); y = in.nextInt();
+		
+	}
+	
+	static void addNumbers()
+	{
+		
+	}
+	
+	static void subNumbers()
+	{
+		
+	}
+	
+	static void multNumbers()
+	{
+		
+	}
+	
+	static void divNumbers()
+	{
+		
+	}
+	
+	static void getFirstNumber()
+	{
+		
+	}
+	
+	static void getSecondNumber()
+	{
+		
+	}
+	
+	static boolean checkIfDigit()
+	{
+		
+	}
+	
+	static double convertNumbers()
+	{
+		
+	}
+	
+	public static void main(String[] ar)
+	{
+		choice = 0; boolean exit = true;
+		
+		do
+		{
+			MyCalc mc = new MyCalc();
+			mc.showMenu();
+			if(choice == 1)
+			{
+				
+			}
+		} while(exit);
+		MyCalc mc = new MyCalc();
+		mc.showMenu();
+		mc.getNumbers();
+		
+	}
+}

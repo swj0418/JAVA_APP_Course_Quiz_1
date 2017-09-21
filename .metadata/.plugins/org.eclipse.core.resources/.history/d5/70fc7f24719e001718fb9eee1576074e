@@ -1,0 +1,123 @@
+package main;
+
+import java.util.Scanner;
+
+public class MyCalc {
+	static int x;
+	static int y;
+	static int choice;
+	static Scanner in = new Scanner(System.in);
+	
+	MyCalc() // Initialization
+	{
+		this.x = 0;
+		this.y = 0;
+	}
+	
+	static void showMenu()
+	{
+		System.out.println("=============MENU=============");
+		System.out.println("1: Add two integers");
+		System.out.println("2. Subtract an integer from an integer");
+		System.out.println("3. Multiply two integers");
+		System.out.println("4. Divide an integer into an integer");
+		System.out.println("5. Exit");
+	}
+	
+	static void getNumbers()
+	{
+		System.out.println("Choose an operation"); choice = in.nextInt();
+	}
+	
+	static void addNumbers()
+	{
+		int answer = 0;
+		answer = x + y;
+		System.out.println(answer);
+		
+	}
+	
+	static void subNumbers()
+	{
+		int answer = 0;
+		answer = x - y;
+		System.out.println(answer);
+	}
+	
+	static void multNumbers()
+	{
+		int answer = 0;
+		answer = x * y;
+		System.out.println(answer);
+	}
+	
+	static void divNumbers()
+	{
+		
+	}
+	
+	static void getFirstNumber()
+	{
+		System.out.print("Input x : "); x = in.nextInt();
+	}
+	
+	static void getSecondNumber()
+	{
+		System.out.print("Input y : "); y = in.nextInt();
+	}
+	
+	static boolean checkIfDigit()
+	{
+		
+		return true;
+	}
+	
+	static double convertNumbers()
+	{
+		return 0.0d;
+	}
+	
+	public static void main(String[] ar)
+	{
+		choice = 0; boolean exit = false;
+		
+		do
+		{
+			MyCalc mc = new MyCalc();
+			System.out.println("Choose an operation : ");
+			mc.showMenu();
+			mc.getNumbers();
+			
+			if(choice == 1)
+			{
+				mc.getFirstNumber();
+				mc.getSecondNumber();
+				mc.addNumbers();
+			}
+			else if(choice == 2)
+			{
+				mc.getFirstNumber();
+				mc.getSecondNumber();
+				mc.subNumbers();
+			}
+			else if(choice == 3)
+			{
+				mc.getFirstNumber();
+				mc.getSecondNumber();
+				mc.multNumbers();
+			}
+			else if(choice == 4)
+			{
+				mc.getFirstNumber();
+				mc.getSecondNumber();
+				mc.divNumbers();
+			}
+			else if(choice == 5)
+			{
+				System.out.println("Terminating");
+				exit = true;
+			}
+		} while(exit == false);
+		
+	}
+}

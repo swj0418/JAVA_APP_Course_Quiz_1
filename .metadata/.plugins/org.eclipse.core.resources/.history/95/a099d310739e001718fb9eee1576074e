@@ -1,0 +1,146 @@
+package main;
+
+import java.util.Scanner;
+
+public class MyCalc {
+	static int x;
+	static int y;
+	static int choice;
+	static Scanner in = new Scanner(System.in);
+	
+	MyCalc() // Initialization
+	{
+		this.x = 0;
+		this.y = 0;
+	}
+	
+	static void showMenu()
+	{
+		System.out.println("=============MENU=============");
+		System.out.println("1: Add two integers");
+		System.out.println("2. Subtract an integer from an integer");
+		System.out.println("3. Multiply two integers");
+		System.out.println("4. Divide an integer into an integer");
+		System.out.println("5. Exit");
+	}
+	
+	static void getNumbers()
+	{
+		System.out.println("Choose an operation"); choice = in.nextInt();
+	}
+	
+	static void addNumbers()
+	{
+		int answer = 0;
+		answer = x + y;
+		System.out.println(answer);
+		
+	}
+	
+	static void subNumbers()
+	{
+		int answer = 0;
+		answer = x - y;
+		System.out.println(answer);
+	}
+	
+	static void multNumbers()
+	{
+		int answer = 0;
+		answer = x * y;
+		System.out.println(answer);
+	}
+	
+	static void divNumbers()
+	{
+		double answer = 0.0d;
+
+		double x_d = (double)x;
+		double y_d = (double)y;
+		
+		answer = (double)(x_d / y_d);
+		
+		System.out.println(answer);
+	}
+	
+	static void getFirstNumber()
+	{
+		try {
+		System.out.print("Input x : "); x = in.nextInt();
+		} catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	static void getSecondNumber()
+	{
+		try {
+		System.out.print("Input y : "); y = in.nextInt();
+		} catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	static boolean checkIfDigit()
+	{
+		Integer inte = null;
+		if(x != inte || y != inte)
+		{
+			System.out.println("Must enter a number");
+		}
+		return true;
+	}
+	
+	static double convertNumbers(String s)
+	{
+		
+		return 0.0d;
+	}
+	
+	public static void main(String[] ar)
+	{
+		choice = 0; boolean exit = false;
+		
+		do
+		{
+			MyCalc mc = new MyCalc();
+			System.out.println("Choose an operation : ");
+			mc.showMenu();
+			mc.getNumbers();
+			
+			if(choice == 1)
+			{
+				mc.getFirstNumber();
+				mc.getSecondNumber();
+				mc.checkIfDigit();
+				mc.addNumbers();
+			}
+			else if(choice == 2)
+			{
+				mc.getFirstNumber();
+				mc.getSecondNumber();
+				mc.subNumbers();
+			}
+			else if(choice == 3)
+			{
+				mc.getFirstNumber();
+				mc.getSecondNumber();
+				mc.multNumbers();
+			}
+			else if(choice == 4)
+			{
+				mc.getFirstNumber();
+				mc.getSecondNumber();
+				mc.divNumbers();
+			}
+			else if(choice == 5)
+			{
+				System.out.println("Terminating");
+				exit = true;
+			}
+		} while(exit == false);
+		
+	}
+}

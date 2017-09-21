@@ -1,0 +1,38 @@
+package main;
+
+public class MyCalc {
+	MyCalc() // Initialization
+	{
+		
+	}
+	
+	static void showMenu()
+	{
+		System.out.println("=============MENU=============");
+		System.out.println("1: Add two integers");
+		System.out.println("2. Subtract an integer from an integer");
+		System.out.println("3. Multiply two integers");
+		System.out.println("4. Divide an integer into an integer");
+		System.out.println("5. Exit");
+	}
+	
+	static void getNumbers()
+	{
+		
+	}
+	
+	static void addNumbers()
+	{
+		
+	}
+	
+	static void subNumbers()
+	{
+		
+	}
+	
+	public static void main(String[] ar)
+	{
+		showMenu();
+	}
+}
